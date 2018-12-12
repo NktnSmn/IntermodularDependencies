@@ -1,0 +1,10 @@
+include ':app'
+
+include ':declaration'
+project(':declaration').projectDir = new File(settingsDir, 'declaration')
+
+include ':disk'
+project(':disk').projectDir = new File(settingsDir, 'disk')
+
+include ':news'
+project(':news').projectDir = new File(settingsDir, 'news')

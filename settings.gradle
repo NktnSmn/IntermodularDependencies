@@ -8,3 +8,6 @@ project(':disk').projectDir = new File(settingsDir, 'disk')
 
 include ':news'
 project(':news').projectDir = new File(settingsDir, 'news')
+
+include ':communicator'
+project(':communicator').projectDir = new File(settingsDir, 'communicator')

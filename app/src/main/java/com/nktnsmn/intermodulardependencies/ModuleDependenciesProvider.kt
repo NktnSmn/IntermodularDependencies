@@ -1,5 +1,6 @@
 package com.nktnsmn.intermodulardependencies
 
+import com.nktnsmn.communicator.contract.CommunicatorDependency
 import com.nktnsmn.disk.contract.DiskDependencies
 import com.nktnsmn.disk.contract.DiskFeature
 import com.nktnsmn.disk.contract.DiskFeatureImpl
@@ -13,4 +14,5 @@ class ModuleDependenciesProvider(
 ) : DiskFeature by diskFeatureImpl,
     NewsFeature by newsFeatureImpl,
     DiskDependencies,
-    NewsDependencies
+    NewsDependencies,
+    CommunicatorDependency

@@ -5,7 +5,7 @@ import com.nktnsmn.disk.DocumentViewerImpl
 import com.nktnsmn.disk.FileDownloaderImpl
 import com.nktnsmn.disk.FileUploaderImpl
 
-class DiskFeatureImpl(private val appContext: Context) : DiskFeature {
+class DiskFeatureDefault(private val appContext: Context) : DiskFeature {
 
     override fun downloadFile(uuid: String) {
         FileDownloaderImpl().downloadFile(uuid)

@@ -4,7 +4,7 @@ import android.content.Context
 import com.nktnsmn.news.NewsPublisherImpl
 import com.nktnsmn.news.NewsViewerImpl
 
-class NewsFeatureImpl(private val appContext: Context) : NewsFeature {
+class NewsFeatureDefault(private val appContext: Context) : NewsFeature {
 
     override fun publishNews(title: String, content: String) {
         NewsPublisherImpl().publishNews(title, content)

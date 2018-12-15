@@ -11,3 +11,6 @@ project(':news').projectDir = new File(settingsDir, 'news')
 
 include ':communicator'
 project(':communicator').projectDir = new File(settingsDir, 'communicator')
+
+include ':common'
+project(':common').projectDir = new File(settingsDir, 'common')

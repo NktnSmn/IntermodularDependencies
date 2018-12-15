@@ -1,0 +1,5 @@
+package com.nktnsmn.intermodulardependencies.modulardependencies
+
+import com.nktnsmn.intermodulardependencies.modularfeatures.ModularFeatures
+
+class ModularDependenciesManager : ModularFeatures(), ModularDependencies

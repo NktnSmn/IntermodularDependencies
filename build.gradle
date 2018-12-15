@@ -15,6 +15,20 @@ buildscript {
     }
 }
 
+project.ext {
+    minSdkVersion = 21
+    compileSdkVersion = 28
+    targetSdkVersion = compileSdkVersion
+    buildToolsVersion = "28.0.3"
+    //java
+    javaVersion = JavaVersion.VERSION_1_8
+    //support
+    androidSupportVersion = "28.0.0"
+    //dagger
+    daggerVersion = "2.19"
+}
+
+
 allprojects {
     repositories {
         google()

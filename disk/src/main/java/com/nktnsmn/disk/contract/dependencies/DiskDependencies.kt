@@ -1,4 +1,4 @@
-package com.nktnsmn.disk.contract
+package com.nktnsmn.disk.contract.dependencies
 
 import com.nktnsmn.declaration.news.NewsPublisher
 import com.nktnsmn.declaration.news.NewsViewer

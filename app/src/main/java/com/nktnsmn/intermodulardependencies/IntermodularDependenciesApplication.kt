@@ -4,23 +4,28 @@ import android.app.Application
 import com.nktnsmn.common.di.main.CommonMainDIComponent
 import com.nktnsmn.communicator.mainDI.CommunicatorMainDIComponent
 import com.nktnsmn.disk.mainDI.DiskMainDIComponent
-import com.nktnsmn.intermodulardependencies.di.ModularDIComponentsManager
-import com.nktnsmn.intermodulardependencies.di.ModularDIComponentsProvider
+import com.nktnsmn.intermodulardependencies.di.app.AppDIComponent
+import com.nktnsmn.intermodulardependencies.di.app.DaggerAppDIComponent
+import com.nktnsmn.intermodulardependencies.di.app.ModularDIModule
+import com.nktnsmn.intermodulardependencies.di.modular.ModularDIComponentsProvider
 
 class IntermodularDependenciesApplication :
     Application(),
     ModularDIComponentsProvider {
 
-    private val modularComponentsProvider: ModularDIComponentsProvider = ModularDIComponentsManager(this)
+    private val appDIComponent: AppDIComponent = buildAppDIComponent()
+
+    private fun buildAppDIComponent(): AppDIComponent =
+        DaggerAppDIComponent.builder().modularDIModule(ModularDIModule(this)).build()
 
     //region ModularDIComponentsProvider
     override fun commonMainDIComponent(): CommonMainDIComponent =
-        modularComponentsProvider.commonMainDIComponent()
+        appDIComponent.commonMainDIComponent()
 
     override fun diskMainDIComponent(): DiskMainDIComponent =
-        modularComponentsProvider.diskMainDIComponent()
+        appDIComponent.diskMainDIComponent()
 
     override fun communicatorMainDIComponent(): CommunicatorMainDIComponent =
-        modularComponentsProvider.communicatorMainDIComponent()
+        appDIComponent.communicatorMainDIComponent()
     //endregion
 }

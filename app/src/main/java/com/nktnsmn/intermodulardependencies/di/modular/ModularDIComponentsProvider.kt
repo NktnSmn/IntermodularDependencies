@@ -1,4 +1,4 @@
-package com.nktnsmn.intermodulardependencies.di
+package com.nktnsmn.intermodulardependencies.di.modular
 
 import com.nktnsmn.common.contract.di.CommonMainDIComponentProvider
 import com.nktnsmn.communicator.contract.di.CommunicatorMainDIComponentProvider

@@ -3,5 +3,5 @@ package com.nktnsmn.communicator.mainDI
 import dagger.Module
 
 @Module
-class CommunicatorMainDIModule {
+internal class CommunicatorMainDIModule {
 }

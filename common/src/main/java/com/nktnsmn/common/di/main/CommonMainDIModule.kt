@@ -6,7 +6,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class CommonMainDIModule(private val application: Application) {
+internal class CommonMainDIModule(private val application: Application) {
 
     @Provides
     @CommonMainDIScope

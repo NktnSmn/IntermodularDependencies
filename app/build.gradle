@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -27,9 +28,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$rootProject.ext.androidSupportVersion"
 
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+
     implementation project(':common')
     implementation project(':declaration')
     implementation project(':disk')
     implementation project(':news')
     implementation project(':communicator')
+
+
 }

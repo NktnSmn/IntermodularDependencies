@@ -18,11 +18,7 @@ class IntermodularDependenciesApplication :
     private val appDIComponent: AppDIComponent = buildAppDIComponent()
 
     private fun buildAppDIComponent(): AppDIComponent =
-        DaggerAppDIComponent.builder().modularDIComponentsDIModule(
-            ModularDIComponentsDIModule(
-                this
-            )
-        ).build()
+        DaggerAppDIComponent.builder().modularDIComponentsDIModule(ModularDIComponentsDIModule(this)).build()
 
     //region AppDIComponentProvider
     override fun appDIComponent(): AppDIComponent = appDIComponent

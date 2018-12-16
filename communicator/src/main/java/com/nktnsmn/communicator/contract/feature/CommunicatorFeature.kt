@@ -1,0 +1,5 @@
+package com.nktnsmn.communicator.contract.feature
+
+import com.nktnsmn.declaration.communicator.CommunicatorActivityIntentProvider
+
+interface CommunicatorFeature : CommunicatorActivityIntentProvider

@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.nktnsmn.communicator.mainDI.CommunicatorMainDIComponent
 
-class CommunicatorMainActivity : AppCompatActivity() {
+internal class CommunicatorMainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

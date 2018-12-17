@@ -1,17 +1,17 @@
 package com.nktnsmn.disk.contract.di
 
-import com.nktnsmn.common.di.FeatureModuleMainDIComponentBuilder
+import com.nktnsmn.common.di.FeatureModuleDIComponentBuilder
 import com.nktnsmn.common.di.main.CommonMainDIComponent
 import com.nktnsmn.disk.contract.dependencies.DiskDependencies
 import com.nktnsmn.disk.mainDI.DaggerDiskMainDIComponent
 import com.nktnsmn.disk.mainDI.DiskMainDIComponent
 
-class DiskMainDIComponentBuilder : FeatureModuleMainDIComponentBuilder<DiskMainDIComponent, DiskDependencies> {
+class DiskMainDIComponentBuilder(
+    commonMainDIComponent: CommonMainDIComponent,
+    dependencies: DiskDependencies
+) : FeatureModuleDIComponentBuilder<DiskMainDIComponent, DiskDependencies>(commonMainDIComponent, dependencies) {
 
-    override fun buildComponent(
-        commonMainDIComponent: CommonMainDIComponent,
-        dependencies: DiskDependencies
-    ): DiskMainDIComponent =
+    override fun buildComponentImmediately(): DiskMainDIComponent =
         DaggerDiskMainDIComponent.builder()
             .commonMainDIComponent(commonMainDIComponent)
             .diskDependencies(dependencies)

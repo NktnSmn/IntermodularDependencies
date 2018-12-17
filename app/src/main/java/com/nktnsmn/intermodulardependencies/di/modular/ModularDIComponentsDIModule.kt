@@ -17,7 +17,7 @@ class ModularDIComponentsDIModule(private val application: Application) {
 
     @Provides
     @AppDIScope
-    fun commonMainDIComponent(): CommonMainDIComponent = CommonMainDIComponentBuilder().buildComponent(application)
+    fun commonMainDIComponent(): CommonMainDIComponent = CommonMainDIComponentBuilder(application).buildComponent()
 
     @Provides
     @AppDIScope
@@ -25,7 +25,7 @@ class ModularDIComponentsDIModule(private val application: Application) {
         commonMainDIComponent: CommonMainDIComponent,
         modularDependencies: ModularDependencies
     ): DiskMainDIComponent =
-        DiskMainDIComponentBuilder().buildComponent(commonMainDIComponent, modularDependencies)
+        DiskMainDIComponentBuilder(commonMainDIComponent, modularDependencies).buildComponent()
 
     @Provides
     @AppDIScope
@@ -33,5 +33,5 @@ class ModularDIComponentsDIModule(private val application: Application) {
         commonMainDIComponent: CommonMainDIComponent,
         modularDependencies: ModularDependencies
     ): CommunicatorMainDIComponent =
-        CommunicatorMainDIComponentBuilder().buildComponent(commonMainDIComponent, modularDependencies)
+        CommunicatorMainDIComponentBuilder(commonMainDIComponent, modularDependencies).buildComponent()
 }

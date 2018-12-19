@@ -5,9 +5,8 @@ import com.nktnsmn.common.di.main.CommonMainDIComponent
 import com.nktnsmn.communicator.mainDI.CommunicatorMainDIComponent
 import com.nktnsmn.disk.mainDI.DiskMainDIComponent
 import com.nktnsmn.intermodulardependencies.di.app.AppDIComponent
-import com.nktnsmn.intermodulardependencies.di.app.AppDIComponentProvider
-import com.nktnsmn.intermodulardependencies.di.app.DaggerAppDIComponent
-import com.nktnsmn.intermodulardependencies.di.modular.ModularDIComponentsDIModule
+import com.nktnsmn.intermodulardependencies.di.app.companion.AppDIComponentBuilder
+import com.nktnsmn.intermodulardependencies.di.app.companion.AppDIComponentProvider
 import com.nktnsmn.intermodulardependencies.di.modular.ModularDIComponentsProvider
 
 class IntermodularDependenciesApplication :
@@ -15,10 +14,7 @@ class IntermodularDependenciesApplication :
     AppDIComponentProvider,
     ModularDIComponentsProvider {
 
-    private val appDIComponent: AppDIComponent = buildAppDIComponent()
-
-    private fun buildAppDIComponent(): AppDIComponent =
-        DaggerAppDIComponent.builder().modularDIComponentsDIModule(ModularDIComponentsDIModule(this)).build()
+    private val appDIComponent: AppDIComponent = AppDIComponentBuilder(this).buildComponent()
 
     //region AppDIComponentProvider
     override fun appDIComponent(): AppDIComponent = appDIComponent

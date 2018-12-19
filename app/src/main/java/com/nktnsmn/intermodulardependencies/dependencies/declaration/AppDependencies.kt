@@ -1,4 +1,4 @@
-package com.nktnsmn.intermodulardependencies.dependencies
+package com.nktnsmn.intermodulardependencies.dependencies.declaration
 
 import com.nktnsmn.declaration.communicator.CommunicatorActivityIntentProvider
 

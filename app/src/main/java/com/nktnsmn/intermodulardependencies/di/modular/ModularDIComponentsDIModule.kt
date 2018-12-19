@@ -7,7 +7,7 @@ import com.nktnsmn.communicator.contract.di.CommunicatorMainDIComponentBuilder
 import com.nktnsmn.communicator.mainDI.CommunicatorMainDIComponent
 import com.nktnsmn.disk.contract.di.DiskMainDIComponentBuilder
 import com.nktnsmn.disk.mainDI.DiskMainDIComponent
-import com.nktnsmn.intermodulardependencies.dependencies.modular.dependencies.ModularDependencies
+import com.nktnsmn.intermodulardependencies.dependencies.modular.ModularDependencies
 import com.nktnsmn.intermodulardependencies.di.app.AppDIScope
 import dagger.Module
 import dagger.Provides

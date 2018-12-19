@@ -1,4 +1,4 @@
-package com.nktnsmn.intermodulardependencies.dependencies.modular.dependencies
+package com.nktnsmn.intermodulardependencies.dependencies.modular
 
 import com.nktnsmn.communicator.contract.dependencies.CommunicatorDependencies
 import com.nktnsmn.disk.contract.dependencies.DiskDependencies

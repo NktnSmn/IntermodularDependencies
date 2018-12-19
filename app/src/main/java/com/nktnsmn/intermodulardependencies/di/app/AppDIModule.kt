@@ -1,7 +1,7 @@
 package com.nktnsmn.intermodulardependencies.di.app
 
 import com.nktnsmn.intermodulardependencies.dependencies.AppDependencies
-import com.nktnsmn.intermodulardependencies.dependencies.modular.dependencies.ModularDependencies
+import com.nktnsmn.intermodulardependencies.dependencies.modular.ModularDependencies
 import dagger.Module
 import dagger.Provides
 

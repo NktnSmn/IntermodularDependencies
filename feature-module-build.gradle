@@ -1,0 +1,6 @@
+apply from: "$rootDir/base-module-build.gradle"
+
+dependencies {
+    implementation project(Modules.common)
+    implementation project(Modules.featuresAPI)
+}

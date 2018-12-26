@@ -1,6 +1,6 @@
 package com.nktnsmn.intermodulardependencies.dependencies.declaration
 
-import com.nktnsmn.declaration.communicator.CommunicatorActivityIntentProvider
+import com.nktnsmn.featuresAPI.messenger.MessengerMainScreenIntentProvider
 
 interface AppDependencies :
-    CommunicatorActivityIntentProvider
+    MessengerMainScreenIntentProvider

@@ -3,8 +3,8 @@ package com.nktnsmn.intermodulardependencies.di.modular
 import android.app.Application
 import com.nktnsmn.common.contract.di.CommonMainDIComponentBuilder
 import com.nktnsmn.common.di.main.CommonMainDIComponent
-import com.nktnsmn.communicator.contract.di.CommunicatorMainDIComponentBuilder
-import com.nktnsmn.communicator.mainDI.CommunicatorMainDIComponent
+import com.nktnsmn.messenger.contract.di.MessengerMainDIComponentBuilder
+import com.nktnsmn.messenger.mainDI.MessengerMainDIComponent
 import com.nktnsmn.disk.contract.di.DiskMainDIComponentBuilder
 import com.nktnsmn.disk.mainDI.DiskMainDIComponent
 import com.nktnsmn.intermodulardependencies.dependencies.declaration.ModularDependencies
@@ -29,9 +29,9 @@ class ModularDIComponentsDIModule(private val application: Application) {
 
     @Provides
     @AppDIScope
-    fun communicatorMainDIComponent(
+    fun messengerMainDIComponent(
         commonMainDIComponent: CommonMainDIComponent,
         modularDependencies: ModularDependencies
-    ): CommunicatorMainDIComponent =
-        CommunicatorMainDIComponentBuilder(commonMainDIComponent, modularDependencies).buildComponent()
+    ): MessengerMainDIComponent =
+        MessengerMainDIComponentBuilder(commonMainDIComponent, modularDependencies).buildComponent()
 }

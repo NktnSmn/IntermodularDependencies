@@ -2,12 +2,12 @@ package com.nktnsmn.intermodulardependencies
 
 import android.app.Application
 import com.nktnsmn.common.di.main.CommonMainDIComponent
-import com.nktnsmn.communicator.mainDI.CommunicatorMainDIComponent
 import com.nktnsmn.disk.mainDI.DiskMainDIComponent
 import com.nktnsmn.intermodulardependencies.di.app.AppDIComponent
 import com.nktnsmn.intermodulardependencies.di.app.companion.AppDIComponentBuilder
 import com.nktnsmn.intermodulardependencies.di.app.companion.AppDIComponentProvider
 import com.nktnsmn.intermodulardependencies.di.modular.ModularDIComponentsProvider
+import com.nktnsmn.messenger.mainDI.MessengerMainDIComponent
 
 class IntermodularDependenciesApplication :
     Application(),
@@ -27,7 +27,7 @@ class IntermodularDependenciesApplication :
     override fun diskMainDIComponent(): DiskMainDIComponent =
         appDIComponent.diskMainDIComponent()
 
-    override fun communicatorMainDIComponent(): CommunicatorMainDIComponent =
-        appDIComponent.communicatorMainDIComponent()
+    override fun messengerMainDIComponent(): MessengerMainDIComponent =
+        appDIComponent.messengerMainDIComponent()
     //endregion
 }

@@ -1,19 +1,19 @@
 package com.nktnsmn.intermodulardependencies.dependencies
 
-import com.nktnsmn.communicator.contract.feature.CommunicatorFeature
-import com.nktnsmn.communicator.contract.feature.CommunicatorFeatureDefaultImpl
-import com.nktnsmn.disk.contract.feature.DiskFeature
+import com.nktnsmn.messenger.contract.feature.MessengerFeatureDefaultImpl
+import com.nktnsmn.featuresAPI.disk.DiskFeature
 import com.nktnsmn.disk.contract.feature.DiskFeatureDefaultImpl
+import com.nktnsmn.featuresAPI.messenger.MessengerFeature
 import com.nktnsmn.intermodulardependencies.dependencies.declaration.FeatureDependencies
-import com.nktnsmn.news.contract.feature.NewsFeature
+import com.nktnsmn.featuresAPI.news.NewsFeature
 import com.nktnsmn.news.contract.feature.NewsFeatureDefaultImpl
 
 class FeatureDependenciesManager(
     private val diskFeature: DiskFeature = DiskFeatureDefaultImpl(),
     private val newsFeature: NewsFeature = NewsFeatureDefaultImpl(),
-    private val communicatorFeature: CommunicatorFeature = CommunicatorFeatureDefaultImpl()
+    private val messengerFeature: MessengerFeature = MessengerFeatureDefaultImpl()
 ) :
     DiskFeature by diskFeature,
     NewsFeature by newsFeature,
-    CommunicatorFeature by communicatorFeature,
+    MessengerFeature by messengerFeature,
     FeatureDependencies

@@ -1,0 +1,3 @@
+package com.nktnsmn.featuresAPI.messenger
+
+interface MessengerFeature : MessengerMainScreenIntentProvider

@@ -1,16 +1,16 @@
 include ':app'
 
-include ':declaration'
-project(':declaration').projectDir = new File(settingsDir, 'declaration')
+include ':common'
+project(':common').projectDir = new File(settingsDir, 'modules/base/common')
+
+include ':featuresAPI'
+project(':featuresAPI').projectDir = new File(settingsDir, 'modules/feature/featuresAPI')
 
 include ':disk'
-project(':disk').projectDir = new File(settingsDir, 'disk')
+project(':disk').projectDir = new File(settingsDir, 'modules/feature/impl/disk')
 
 include ':news'
-project(':news').projectDir = new File(settingsDir, 'news')
+project(':news').projectDir = new File(settingsDir, 'modules/feature/impl/news')
 
-include ':communicator'
-project(':communicator').projectDir = new File(settingsDir, 'communicator')
-
-include ':common'
-project(':common').projectDir = new File(settingsDir, 'common')
+include ':messenger'
+project(':messenger').projectDir = new File(settingsDir, 'modules/feature/impl/messenger')

@@ -1,18 +1,20 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion Versions.compileSdk
 
     defaultConfig {
-        applicationId "com.nktnsmn.intermodulardependencies"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId AppConfig.id
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode AppConfig.versionCode
+        versionName AppConfig.versionName
+    }
+
+    sourceSets {
+        main.java.srcDirs += OtherSettings.srcDirs
     }
 
     buildTypes {
@@ -24,17 +26,16 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$rootProject.ext.androidSupportVersion"
+    implementation Libraries.kotlin
+    implementation Libraries.androidSupportV7
 
-    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+    kapt AnnotationProcessor.daggerKapt
 
-    implementation project(':common')
-    implementation project(':declaration')
-    implementation project(':disk')
-    implementation project(':news')
-    implementation project(':communicator')
+    implementation project(Modules.common)
+    implementation project(Modules.featuresAPI)
+    implementation project(Modules.disk)
+    implementation project(Modules.news)
+    implementation project(Modules.messenger)
 
 
 }

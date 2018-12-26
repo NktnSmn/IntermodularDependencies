@@ -4,13 +4,13 @@ include ':common'
 project(':common').projectDir = new File(settingsDir, 'modules/base/common')
 
 include ':featuresAPI'
-project(':featuresAPI').projectDir = new File(settingsDir, 'modules/feature/featuresAPI')
+project(':featuresAPI').projectDir = new File(settingsDir, 'modules/api/featuresAPI')
 
 include ':disk'
-project(':disk').projectDir = new File(settingsDir, 'modules/feature/impl/disk')
+project(':disk').projectDir = new File(settingsDir, 'modules/feature/disk')
 
 include ':news'
-project(':news').projectDir = new File(settingsDir, 'modules/feature/impl/news')
+project(':news').projectDir = new File(settingsDir, 'modules/feature/news')
 
 include ':messenger'
-project(':messenger').projectDir = new File(settingsDir, 'modules/feature/impl/messenger')
+project(':messenger').projectDir = new File(settingsDir, 'modules/feature/messenger')

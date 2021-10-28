@@ -6,14 +6,17 @@ object AppConfig {
 
 object Modules {
     val common = ":common"
-    val featuresAPI = ":featuresAPI"
+    val feature = ":feature"
+    val diskApi = ":disk-api"
     val disk = ":disk"
+    val newsApi = ":news-api"
     val news = ":news"
+    val messengerApi = ":messenger-api"
     val messenger = ":messenger"
 }
 
 object Versions {
-    val gradle = "3.2.1"
+    val gradle = "3.5.1"
 
     val minSdk = 21
     val compileSdk = 28

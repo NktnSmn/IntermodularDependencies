@@ -32,10 +32,8 @@ dependencies {
     kapt AnnotationProcessor.daggerKapt
 
     implementation project(Modules.common)
-    implementation project(Modules.featuresAPI)
+    implementation project(Modules.feature)
     implementation project(Modules.disk)
     implementation project(Modules.news)
     implementation project(Modules.messenger)
-
-
 }

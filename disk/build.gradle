@@ -1,0 +1,9 @@
+apply from: "$rootDir/feature-module-build.gradle"
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    api project(Modules.diskApi)
+    implementation project(Modules.messengerApi)
+
+    kapt AnnotationProcessor.daggerKapt
+}

@@ -1,0 +1,6 @@
+apply from: "$rootDir/feature-module-build.gradle"
+
+dependencies {
+    api project(Modules.newsApi)
+    implementation project(Modules.diskApi)
+}

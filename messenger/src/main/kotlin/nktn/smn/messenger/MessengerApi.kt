@@ -1,0 +1,5 @@
+package nktn.smn.messenger
+
+import nktn.smn.messenger_api.MessengerMainScreenIntentProvider
+
+interface MessengerApi : MessengerMainScreenIntentProvider

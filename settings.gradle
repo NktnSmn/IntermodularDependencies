@@ -1,16 +1,25 @@
 include ':app'
 
-include ':common'
-project(':common').projectDir = new File(settingsDir, 'modules/base/common')
+include ':feature'
+project(':feature').projectDir = new File(settingsDir, 'feature')
 
-include ':featuresAPI'
-project(':featuresAPI').projectDir = new File(settingsDir, 'modules/api/featuresAPI')
+include ':common'
+project(':common').projectDir = new File(settingsDir, 'common')
+
+include ':disk-api'
+project(':disk-api').projectDir = new File(settingsDir, 'disk-api')
 
 include ':disk'
-project(':disk').projectDir = new File(settingsDir, 'modules/feature/disk')
+project(':disk').projectDir = new File(settingsDir, 'disk')
+
+include ':news-api'
+project(':news-api').projectDir = new File(settingsDir, 'news-api')
 
 include ':news'
-project(':news').projectDir = new File(settingsDir, 'modules/feature/news')
+project(':news').projectDir = new File(settingsDir, 'news')
+
+include ':messenger-api'
+project(':messenger-api').projectDir = new File(settingsDir, 'messenger-api')
 
 include ':messenger'
-project(':messenger').projectDir = new File(settingsDir, 'modules/feature/messenger')
+project(':messenger').projectDir = new File(settingsDir, 'messenger')

@@ -1,6 +1,0 @@
-apply from: "$rootDir/feature-module-build.gradle"
-apply plugin: 'kotlin-kapt'
-
-dependencies {
-    kapt AnnotationProcessor.daggerKapt
-}

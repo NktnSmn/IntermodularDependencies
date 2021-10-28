@@ -1,0 +1,10 @@
+apply from: "$rootDir/base-module-build.gradle"
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(Modules.feature)
+
+    api Libraries.dagger
+    api Libraries.androidSupportV7
+    kapt AnnotationProcessor.daggerKapt
+}
